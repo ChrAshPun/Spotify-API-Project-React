@@ -1,0 +1,35 @@
+.FindAnArtist {
+ opacity: 0;
+ width: 400px;
+ position: absolute;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ animation-name: show-searchbar;
+ animation-duration: 1.5s;
+ animation-timing-function: ease;
+ animation-iteration-count: 1;
+ animation-fill-mode: forwards;
+}
+
+.FindAnArtist h1 {
+ text-align: center;
+ color: white;
+ margin: 0 auto 20px auto;
+}
+
+@keyframes show-searchbar {
+ 0% {
+   opacity: 0;
+   top: calc(43% + 20px);
+ }
+ 100% {
+   opacity: 1;
+   top: 43%;
+ }
+}
+
+@media screen and (max-device-width: 640px) {
+.FindAnArtist {
+ width: calc(100% - 20px);
+}
+}

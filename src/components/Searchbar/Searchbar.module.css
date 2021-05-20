@@ -1,0 +1,28 @@
+.SearchbarContainer {
+ width: 100%;
+ height: 40px;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ background-color: rgba(255, 255, 255, 0.15);
+ margin: 0 auto;
+}
+
+.SearchbarInput {
+width: calc(100% - 40px);
+height: 100%;
+font-size: 16px;
+color: #fff;
+background-color: transparent;
+border: none;
+margin: 0 0 0 10px;
+outline: none;
+}
+
+.SearchIcon {
+width: 20px;
+height: 20px;
+margin: 0 10px;
+cursor: pointer;
+}

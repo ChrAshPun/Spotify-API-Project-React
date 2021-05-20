@@ -1,0 +1,142 @@
+.SearchResult {
+  width: 700px;
+  height: 380px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid transparent;
+  animation-name: show-searchresult;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-searchresult {
+  0% {
+    opacity: 0;
+    top: calc(44% + 20px);
+  }
+  100% {
+    opacity: 1;
+    top: 44%;
+  }
+}
+
+.SearchResultBg {
+  width: 640px;
+  height: 380px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.04);
+  z-index: -2;
+}
+
+.BackButton {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: -60px;
+  left: 0%;
+  cursor: pointer;
+}
+
+.BackButton:hover {
+  transition: all 250ms;
+  opacity: 0.5;
+}
+
+.ArtistTag {
+  width: 105px;
+  height: 35px;
+  background-color: rgba(30, 50, 100, 0.2);
+  text-align: center;
+  line-height: 35px;
+  margin: 45px 0 12px 15px;
+}
+
+.ArtistTag p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.ArtistName {
+  width: 430px;
+  background-color: #1e3264;
+  padding-left: 50px;
+  line-height: 65px;
+  margin: 0 0 25px 0;
+  z-index: 10;
+}
+
+.ArtistName h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.SpotifyButton {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 44px;
+  background-color: #1db954;
+  padding: 10px 30px;
+  border-radius: 30px;
+  border: none;
+  margin: 0 0 0 50px;
+  outline: none;
+}
+
+.SpotifyButton:hover {
+  transition: all 250ms;
+  background-color: #0ca140;
+}
+
+.ArtistImg {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+@media screen and (max-device-width: 640px) {
+  .SearchResult {
+    width: 100%;
+    height: 380px;
+  }
+
+  .BackButton {
+    left: 10px;
+  }
+
+  .ArtistTag {
+    margin: 45px 0 180px 10px;
+  }
+
+  .ArtistTag p {
+    font-size: 16px;
+  }
+
+  .ArtistName {
+    margin: 0 0 40px 0;
+  }
+
+  .ArtistName h1 {
+    font-size: 32px;
+  }
+
+  .SpotifyButton {
+    width: 166px;
+    font-size: 16px;
+  }
+}
