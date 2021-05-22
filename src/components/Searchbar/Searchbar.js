@@ -23,7 +23,8 @@ const Searchbar = ({
   };
 
   // GET request - search for artist after setInput
-  const submitHandler = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
     console.log("GETTING RESULT...");
     axios("https://api.spotify.com/v1/search?q=" + inputText + "&type=artist", {
       method: "GET",
