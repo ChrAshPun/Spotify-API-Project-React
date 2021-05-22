@@ -55,7 +55,7 @@ const Searchbar = ({
           className={styles.SearchbarInput}
           type="text"
         ></input>
-        <button type="submit" onClick={inputTextHandler}>
+        <button type="submit" onClick={submitHandler}>
           <img
             className={styles.SearchIcon}
             src={SearchIcon}
