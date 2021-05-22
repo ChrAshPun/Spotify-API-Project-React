@@ -2,7 +2,7 @@
   "name": "spotify-api-project-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://chrashpun.github.io/Spotify-API-Project-React",
+  "homepage": "https://chrashpun.github.io/Spotify-API-Project-React",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",

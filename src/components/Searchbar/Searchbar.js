@@ -1,6 +1,6 @@
 import styles from "./Searchbar.module.css";
 import SearchIcon from "./search.svg";
-import axios from "axios"
+import axios from "axios";
 
 const Searchbar = ({
   token,
@@ -11,19 +11,13 @@ const Searchbar = ({
   setArtistSpotifyLink,
   setResult
 }) => {
+  // update inputText
   const inputTextHandler = e => {
     setInputText(e.target.value);
   };
 
-  const keyPressHandler = e => {
-    if (e.code === "Enter") {
-      e.preventDefault();
-      submitHandler();
-    }
-  };
-
   // GET request - search for artist after setInput
-  const submitHandler = (e) => {
+  const submitHandler = e => {
     e.preventDefault();
     console.log("GETTING RESULT...");
     axios("https://api.spotify.com/v1/search?q=" + inputText + "&type=artist", {
@@ -51,7 +45,6 @@ const Searchbar = ({
       <form>
         <input
           onChange={inputTextHandler}
-          onKeyPress={keyPressHandler}
           id="SearchbarInput"
           className={styles.SearchbarInput}
           type="text"
